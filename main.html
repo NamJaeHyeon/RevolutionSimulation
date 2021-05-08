@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>공전</title>
+	<style type="text/css">
+		body{
+			background-color: black;
+		}
+		canvas{
+			background-color: white;
+			width: 700px;
+			height: 700px;
+		}
+		.grid{
+			display: grid;
+			grid-template-columns: auto 1fr;
+		}
+		.option{
+			background-color: rgb(200,200,200);
+			padding : 20px;
+			font-size: 25px;
+			font-weight: bold;
+		}
+		input{
+			width: 50px;
+			height: 30px;
+			font-size: 25px;
+		}
+	</style>
+</head>
+<body>
+	<div class="grid">
+		<canvas id="cvs" width="1000px" height="1000px"></canvas>
+		<div class="option" style="margin-left: 30px;">
+			시간 빠르기 : 10^<input type="number" name="timeSpeed" value="6" onclick="update()" step="0.2">배<br>
+			fps : <input type="number" name="fps" value="6" onclick="update()">frame/second<br>
+			배율 : 10^<input type="number" name="rate" value="9" onclick="update()" step="0.1">m/pixel
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="script.js"></script>
+</html>
